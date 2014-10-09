@@ -17,3 +17,7 @@ group :doc do
 end
 
 gem 'bootstrap-generators', '~> 3.2.0'
+
+group :development do
+  gem 'hirb', '~> 0.7.2'
+end

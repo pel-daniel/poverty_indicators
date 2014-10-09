@@ -2,3 +2,145 @@ es:
   graphic: Graficar
   municipality_graph: Gráfica por municipio
   poverty_indicators: Indicadores de Pobreza
+
+  formulas:
+    avg: Promedio
+    sum: Suma
+    min: Mínimo
+    max: Máximo
+
+  indicators:
+    pobtot_ajustada: Población total
+    pobreza: Porcentaje de personas en pobreza
+    pobreza_e: Porcentaje de personas en pobreza extrema
+    pobreza_m: Porcentaje de personas en pobreza moderada
+    vul_car: Porcentaje de personas vulnerables por carencia social Intensidad de la pobreza
+    vul_ing: Porcentaje de personas vulnerables por ingreso
+    npnv: Porcentaje de personas no pobres y no vulnerables
+    ic_rezedu: Porcentaje de personas con rezago educativo
+    ic_asalud: Porcentaje de personas con carencia por acceso a los servicios de salud Intensidad de la pobreza extrema
+    ic_segsoc: Porcentaje de personas con carencia por acceso a la seguridad social
+    ic_cv: Porcentaje de personas con carencia por calidad y espacios de la vivienda
+    ic_sbv: Porcentaje de personas con carencia por acceso a los servicios básicos en la vivienda
+    ic_ali: Porcentaje de personas con carencia por acceso a la alimentación Intensidad en pobreza moderada
+    carencias: Porcentaje de personas con al menos una carencia social
+    carencias3: Porcentaje de personas con tres o más carencias sociales
+    plb: Porcentaje de  personas con ingreso inferior a la línea de bienestar
+    plb_m: Porcentaje de personas  con ingreso inferior a la línea de bienestar mínimo
+    rankin_p: Lugar que ocupa en el contexto nacional de pobreza(porcentaje)
+    rankin_pe: Lugar que ocupa en el contexto nacional de pobreza extrema(porcentaje)
+    N_pobreza: Personas en pobreza
+    N_pobreza_e: Personas en pobreza extrema
+    N_pobreza_m: Personas en pobreza moderada
+    N_vul_car: Personas vulnerables por carencia social
+    N_vul_ing: Personas vulnerables por ingreso
+    N_npnv: Personas no pobres y no vulnerables
+    N_ic_rezedu: Personas con rezago educativo
+    N_ic_asalud: Personas con carencia por acceso a los servicios de salud
+    N_ic_segsoc: Personas con carencia por acceso a la seguridad social
+    N_ic_cv: Personas con carencia por calidad y espacios de la vivienda
+    N_ic_sbv: Personas con carencia por acceso a los servicios básicos en la vivienda
+    N_ic_ali: Personas con carencia por acceso a la alimentación
+    N_carencias: Personas con al menos una carencia social
+    N_carencias3: Personas con tres o más carencias sociales
+    N_plb: Personas con ingreso inferior a la línea de bienestar
+    N_plb_m: Personas  con ingreso inferior a la línea de bienestar mínimo
+    perrankin_p: Lugar que ocupa en el contexto nacional de pobreza(personas)
+    perrankin_pe: Lugar que ocupa en el contexto nacional de pobreza extrema(personas)
+    cppobreza: Carencias promedio de personas en pobreza
+    cppobreza_e: Carencias promedio de personas en pobreza extrema
+    cppobreza_m: Carencias promedio de personas en pobreza moderada
+    cpvul_car: Carencias promedio de personas vulnerables por carencia social
+    cpic_rezedu: Carencias promedio de personas en rezago educativo
+    cpic_asalud: Carencias promedio de personas en acceso a los servicios de salud
+    cpic_segsoc: Carencias promedio de personas en acceso a la seguridad social
+    cpic_cv: Carencias promedio por calidad y espacios de la vivienda
+    cpic_sbv: Carencias promedio de personas por acceso a los servicios básicos en la vivienda
+    cpic_ali: Carencias promedio de personas por acceso a la alimentación
+    cpcarencias: Carencias promedio de personas con al menos una carencia social
+    cpcarencias3: Carencias promedio de personas con tres o más carencias sociales
+    cpplb: Carencias promedio de personas con ingreso inferior a la línea de bienestar
+    cpplbm: Carencias promedio de personas con ingreso inferior a la línea de bienestar mínimo
+    pobtot_00: Población total de la entidad en 2000
+    pobtot_05: Población total de la entidad en 2005
+    pobtot_10: Población total de la entidad en 2010
+    porc_pob_15_analfa00: Porcentaje de población de 15 años o más analfabeta en  2000
+    porc_pob_15_analfa05: Porcentaje de población de 15 años o más analfabeta en 2005
+    porc_pob_15_analfa10: Porcentaje de población de 15 años o más analfabeta en 2010
+    porc_pob614_noasiste00: Porcentaje de población de 6 a 14 años que no asiste a la escuela en 2000
+    porc_pob614_noasiste05: Porcentaje de población de 6 a 14 años que no asiste a la escuela en 2005
+    porc_pob614_noasiste10: Porcentaje de población de 6 a 14 años que no asiste a la escuela en 2010
+    porc_pob15_basicainc00: Porcentaje población con educación básica incompleta en 2000
+    porc_pob15_basicainc05: Porcentaje población con educación básica incompleta en 2005
+    porc_pob15_basicainc10: Porcentaje población con educación básica incompleta en 2010
+    porc_pob_snservsal00: Porcentaje de población sin derecho-habiencia a los servicios de salud en 2000
+    porc_pob_snservsal05: Porcentaje de población sin derecho-habiencia a los servicios de salud en 2005
+    porc_pob_snservsal10: Porcentaje de población sin derecho-habiencia a los servicios de salud en 2010
+    porc_vivpisotierra00: Porcentaje de viviendas con piso de tierra en 2000
+    porc_vivpisotierra05: Porcentaje de viviendas con piso de tierra en 2005
+    porc_vivpisotierra10: Porcentaje de viviendas con piso de tierra en 2010
+    porc_vivsnsan00: Porcentaje de viviendas que no disponen de excusado o sanitario en 2000
+    porc_vivsnsan05: Porcentaje de viviendas que no disponen de excusado o sanitario en 2005
+    porc_vivsnsan10: Porcentaje de viviendas que no disponen de excusado o sanitario en 2010
+    porc_snaguaent00: Porcentaje de viviendas que no disponen de agua entubada de la red pública en 2000
+    porc_snaguaent05: Porcentaje de viviendas que no disponen de agua entubada de la red pública en 2005
+    porc_snaguaent10: Porcentaje de viviendas que no disponen de agua entubada de la red pública en 2010
+    porc_vivsndren00: Porcentaje de viviendas que no disponen de drenaje en 2000
+    porc_vivsndren05: Porcentaje de viviendas que no disponen de drenaje en 2005
+    porc_vivsndren10: Porcentaje de viviendas que no disponen de drenaje en 2010
+    porc_vivsnenergia00: Porcentaje de viviendas que no disponen de energía eléctrica en 2000
+    porc_vivsnenergia05: Porcentaje de viviendas que no disponen de energía eléctrica en 2005
+    porc_vivsnenergia10: Porcentaje de viviendas que no disponen de energía eléctrica en 2010
+    porc_vivsnlavadora00: Porcentaje de viviendas que no disponen de lavadora en 2000
+    porc_vivsnlavadora05: Porcentaje de viviendas que no disponen de lavadora en 2005
+    porc_vivsnlavadora10: Porcentaje de viviendas que no disponen de lavadora en 2010
+    porc_vivsnrefri00: Porcentaje de viviendas que no disponen de refrigerador en 2000
+    porc_vivsnrefri05: Porcentaje de viviendas que no disponen de refrigerador en 2005
+    porc_vivsnrefri10: Porcentaje de viviendas que no disponen de refrigerador en 2010
+    irez_soc00: Índice de rezago social en 2000
+    irez_soc05: Índice de rezago social en 2005
+    irez_soc10: Índice de rezago social en 2010
+    gdo_rezsoc00: Grado de rezago social en 2000
+    gdo_rezsoc05: Grado de rezago social en 2005
+    gdo_rezsoc10: Grado de rezago social en 2010
+    l_ocupnac00: Lugar que ocupa en el contexto nacional en 2000
+    l_ocupnac05: Lugar que ocupa en el contexto nacional en 2005
+    l_ocupnac10: Lugar que ocupa en el contexto nacional en 2010
+    p_rez_edu_90: Porcentaje de la población con rezago educativo 1990
+    p_rez_edu_00: Porcentaje de la población con rezago educativo 2000
+    p_rez_edu_10: Porcentaje de la población con rezago educativo 2010
+    p_ser_sal_00: Porcentaje de la población con carencia por acceso a los servicios de salud 2000
+    p_ser_sal_10: Porcentaje de la población con carencia por acceso a los servicios de salud 2010
+    p_viv_pisos_90: Porcentaje de la población en viviendas  con carencia por material de pisos 1990
+    p_viv_pisos_00: Porcentaje de la población en viviendas  con carencia por material de pisos 2000
+    p_viv_pisos_10: Porcentaje de la población en viviendas  con carencia por material de pisos 2010
+    p_viv_muros_90: Porcentaje de la población en viviendas con carencia por material de muros 1990
+    p_viv_muros_00: Porcentaje de la población en viviendas con carencia por material de muros 2000
+    p_viv_muros_10: Porcentaje de la población en viviendas con carencia por material de muros 2010
+    p_viv_techos_90: Porcentaje de la población en viviendas con carencia por material de techos 1990
+    p_viv_techos_00: Porcentaje de la población en viviendas con carencia por material de techos 2000
+    p_viv_techos_10: Porcentaje de la población en viviendas con carencia por material de techos 2010
+    p_viv_hacin_90: Porcentaje de la población en viviendas con carencia por hacinamiento 1990
+    p_viv_hacin_00: Porcentaje de la población en viviendas con carencia por hacinamiento 2000
+    p_viv_hacin_10: Porcentaje de la población en viviendas con carencia por hacinamiento 2010
+    p_viv_agu_entub_90: Porcentaje de la población en viviendas con carencia por acceso al agua entubada 1990
+    p_viv_agu_entub_00: Porcentaje de la población en viviendas con carencia por acceso al agua entubada 2000
+    p_viv_agu_entub_10: Porcentaje de la población en viviendas con carencia por acceso al agua entubada 2010
+    p_viv_dren_90: Porcentaje de la población en viviendas con carencia por servicio de drenaje 1990
+    p_viv_dren_00: Porcentaje de la población en viviendas con carencia por servicio de drenaje 2000
+    p_viv_dren_000: Porcentaje de la población en viviendas con carencia por servicio de drenaje 2010
+    p_viv_elect_90: Porcentaje de la población en viviendas con carencia por servicio de electricidad 1990
+    p_viv_elect_00: Porcentaje de la población en viviendas con carencia por servicio de electricidad 2000
+    p_viv_elect_10: Porcentaje de la población en viviendas con carencia por servicio de electricidad 2010
+    pobreza_alim_90: Porcentaje de pobreza por ingresos alimentaria 1990
+    pobreza_alim_00: Porcentaje de pobreza por ingresos alimentaria 2000
+    pobreza_alim_10: Porcentaje de pobreza por ingresos alimentaria 2010
+    pobreza_cap_90: Porcentaje de pobreza por ingresos de capacidades 1990
+    pobreza_cap_00: Porcentaje de pobreza por ingresos de capacidades 2000
+    pobreza_cap_10: Porcentaje de pobreza por ingresos de capacidades 2010
+    pobreza_patrim_90: Porcentaje de pobreza por ingresos patrimonial 1990
+    pobreza_patrim_00: Porcentaje de pobreza por ingresos patrimonial 2000
+    pobreza_patrim_10: Porcentaje de pobreza por ingresos alimentaria 2010
+    gini_90: Coeficiente de Gini 1990
+    gini_00: Coeficiente de Gini 2000
+    gini_10: Coeficiente de Gini 2010

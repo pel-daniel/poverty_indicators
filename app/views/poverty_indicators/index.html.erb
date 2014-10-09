@@ -5,11 +5,11 @@
 <div class="row">
 
   <div class="col-xs-3">
-    <%= select_tag :formulas, options_for_select(formulas), class: 'form-control' %>
+    <%= select_tag :formulas, options_for_select(formulas.map { |f| [t(f, scope: :formulas), f] }), class: 'form-control' %>
   </div>
 
   <div class="col-xs-2">
-    <%= select_tag :abc, options_for_select(PovertyIndicator.indicators), class: 'form-control' %>
+    <%= select_tag :abc, options_for_select(PovertyIndicator.indicators.map { |i| [t(i, scope: :indicators), i] }), class: 'form-control' %>
   </div>
 
   <div class="col-xs-4">

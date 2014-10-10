@@ -1,0 +1,43 @@
+<div class="page-header">
+  <h1><%= t :indicator_by_state %></h1>
+</div>
+
+<div class="row">
+  <%= render 'form' %>
+</div>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active">
+    <a href="#table" role="tab" data-toggle="tab"><%= t :table %></a>
+  </li>
+  <li>
+    <a href="#map" role="tab" data-toggle="tab"><%= t :map %></a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+  <div class="tab-pane active" id="table">
+    <table class="table table-condensed">
+      <thead>
+      <tr>
+        <td><%= t :state %></td>
+        <td><%= t @graph.indicator, scope: :indicators %></td>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @graph.records.each do |row| %>
+
+        <tr>
+          <td><%= row.nom_ent %></td>
+          <td><%= number_with_delimiter row.send(@graph.indicator) %></td>
+        </tr>
+
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-pane" id="map">mapa</div>
+</div>

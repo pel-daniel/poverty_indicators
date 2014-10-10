@@ -1,6 +1,6 @@
 module PovertyIndicatorsHelper
 
   def formulas
-    %w(sum avg min max)
+    %w(maximum minimum average sum)
   end
 end

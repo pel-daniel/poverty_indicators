@@ -1,13 +1,17 @@
 es:
   graphic: Graficar
+  indicator_by_state: Indicador por Estado
+  map: Mapa
   municipality_graph: Gráfica por municipio
   poverty_indicators: Indicadores de Pobreza
+  state: Estado
+  table: Tabla
 
   formulas:
-    avg: Promedio
+    average: Promedio
     sum: Suma
-    min: Mínimo
-    max: Máximo
+    minimum: Mínimo
+    maximum: Máximo
 
   indicators:
     pobtot_ajustada: Población total

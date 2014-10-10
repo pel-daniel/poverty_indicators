@@ -2,8 +2,10 @@ es:
   graphic: Graficar
   indicator_by_state: Indicador por Estado
   map: Mapa
+  menu: Menú
   municipality_graph: Gráfica por municipio
   poverty_indicators: Indicadores de Pobreza
+  show: Mostrar
   state: Estado
   table: Tabla
 

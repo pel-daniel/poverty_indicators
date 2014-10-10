@@ -1,21 +1,21 @@
-<%= form_for @graph, url: indicator_by_state_poverty_indicators_path, method: :get do |f| %>
+<%= form_for @indicator, url: indicator_by_state_poverty_indicators_path, method: :get do |f| %>
 
   <div class="col-xs-2">
     <%= f.select :formula,
-                 options_for_select(formulas.map { |formula| [t(formula, scope: :formulas), formula] }, @graph.formula),
+                 options_for_select(formulas.map { |formula| [t(formula, scope: :formulas), formula] }, @indicator.formula),
                  {},
                  class: 'form-control' %>
   </div>
 
   <div class="col-xs-3">
     <%= f.select :indicator,
-                 options_for_select(PovertyIndicator.indicators.map { |i| [t(i, scope: :indicators), i] }, @graph.indicator),
+                 options_for_select(PovertyIndicator.indicators.map { |i| [t(i, scope: :indicators), i] }, @indicator.indicator),
                  {},
                  class: 'form-control' %>
   </div>
 
   <div class="col-xs-4">
-    <button type="submit" class="btn btn-default"><%= t :graphic %></button>
+    <button type="submit" class="btn btn-default"><%= t :show %></button>
   </div>
 
 <% end %>

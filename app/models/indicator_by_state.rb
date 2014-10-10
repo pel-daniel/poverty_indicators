@@ -1,4 +1,4 @@
-class MunicipalityGraph
+class IndicatorByState
   extend ActiveModel::Naming
   include ActiveModel::Conversion
 

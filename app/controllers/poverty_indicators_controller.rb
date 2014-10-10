@@ -1,9 +1,9 @@
 class PovertyIndicatorsController < ApplicationController
   def index
-    @graph = MunicipalityGraph.new
+    @graph = IndicatorByState.new
   end
 
-  def municipality_graph
-    @graph = MunicipalityGraph.new params[:municipality_graph]
+  def indicator_by_state
+    @graph = IndicatorByState.new params[:indicator_by_state]
   end
 end

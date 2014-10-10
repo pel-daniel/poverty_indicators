@@ -9,40 +9,72 @@
 
 <% unless @indicator.empty? %>
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-      <a href="#table" role="tab" data-toggle="tab"><%= t :table %></a>
-    </li>
-    <li>
-      <a href="#map" role="tab" data-toggle="tab"><%= t :map %></a>
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+          <a href="#map" role="tab" data-toggle="tab"><%= t :map %></a>
+        </li>
+        <li>
+          <a href="#table" role="tab" data-toggle="tab"><%= t :table %></a>
+        </li>
+      </ul>
 
-  <div class="tab-content">
+      <div class="tab-content">
 
-    <div class="tab-pane active" id="table">
-      <table class="table table-condensed">
-        <thead>
-        <tr>
-          <td><%= t :state %></td>
-          <td><%= t @indicator.indicator, scope: :indicators %></td>
-        </tr>
-        </thead>
+        <div class="tab-pane" id="table">
+          <table class="table table-condensed">
+            <thead>
+            <tr>
+              <td><%= t :state %></td>
+              <td><%= t @indicator.indicator, scope: :indicators %></td>
+            </tr>
+            </thead>
 
-        <tbody>
-        <% @indicator.records.each do |row| %>
+            <tbody>
+            <% @indicator.records.each do |row| %>
 
-          <tr>
-            <td><%= row.nom_ent %></td>
-            <td><%= number_with_delimiter row.send(@indicator.indicator) %></td>
-          </tr>
+              <tr>
+                <td><%= row.nom_ent %></td>
+                <td><%= number_with_delimiter row.send(@indicator.indicator) %></td>
+              </tr>
 
-        <% end %>
-        </tbody>
-      </table>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-pane active" id="map">
+          <div id="map_container"></div>
+        </div>
+      </div>
     </div>
-
-    <div class="tab-pane" id="map">mapa</div>
   </div>
+
+  <script>
+    $(function () {
+
+      var data = <%= raw @indicator.values_for_map.to_json %>;
+
+      $('#map_container').highcharts('Map', {
+        title : {
+          text : '<%= t @indicator.indicator, scope: :indicators %>'
+        },
+        mapNavigation: {
+          enabled: true
+        },
+        colorAxis: {
+          min: null,
+          max: null
+        },
+        series : [{
+          data : data,
+          mapData: Highcharts.maps['countries/mx/mx-all'],
+          joinBy: 'hc-key',
+          name: '<%= t @indicator.indicator, scope: :indicators %>'
+        }]
+      });
+    });
+  </script>
 
 <% end %>

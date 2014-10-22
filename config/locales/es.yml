@@ -1,7 +1,14 @@
 es:
   by_state: Por estado
   correlations: Correlaciones
+  formula: 'Fórmula:'
+  formula_instructions: |
+    Indica como se calcula el valor del estado en base a los municipios.<br/>
+    Máximo/Mínimo: Muestra el municipio con el máximo/mínimo valor.<br/>
+    Promedio: Promedio de todos los municipios del estado.<br/>
+    Suma: Suma de todos los municipios del estado.
   graphic: Graficar
+  indicator: 'Indicador:'
   indicator_by_state: Indicador por Estado
   map: Mapa
   menu: Menú

@@ -2,14 +2,11 @@
   <h1><%= t :indicator_by_state %></h1>
 </div>
 
-<div class="row">
-  <%= render 'form' %>
-</div>
-
+<%= render 'form' %>
 
 <% unless @indicator.empty? %>
 
-  <div class="row">
+  <div class="row separator">
     <div class="col-xs-12">
       <ul class="nav nav-tabs" role="tablist">
         <li class="active">
@@ -20,7 +17,7 @@
         </li>
       </ul>
 
-      <div class="tab-content">
+      <div class="tab-content separator">
 
         <div class="tab-pane" id="table">
           <table class="table table-condensed">

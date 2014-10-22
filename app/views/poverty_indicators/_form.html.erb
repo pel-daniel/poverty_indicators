@@ -1,21 +1,44 @@
 <%= form_for @indicator, url: indicator_by_state_poverty_indicators_path, method: :get do |f| %>
 
-  <div class="col-xs-2">
-    <%= f.select :formula,
-                 options_for_select(formulas.map { |formula| [t(formula, scope: :formulas), formula] }, @indicator.formula),
-                 {},
-                 class: 'form-control' %>
+  <div class="row">
+    <div class="col-xs-3">
+      <label for="indicator"><%= t :indicator %></label>
+    </div>
+
+    <div class="col-xs-2">
+      <%= content_tag :label,
+                      t(:formula),
+                      title: t(:formula_instructions),
+                      class: 'hover',
+                      id: 'instructions',
+                      data: { placement: 'bottom' } %>
+    </div>
   </div>
 
-  <div class="col-xs-3">
-    <%= f.select :indicator,
-                 options_for_select(PovertyIndicator.indicators.map { |i| [t(i, scope: :indicators), i] }, @indicator.indicator),
-                 {},
-                 class: 'form-control' %>
-  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <%= f.select :indicator,
+                   options_for_select(PovertyIndicator.indicators.map { |i| [t(i, scope: :indicators), i] }, @indicator.indicator),
+                   {},
+                   class: 'form-control', id: 'indicator' %>
+    </div>
 
-  <div class="col-xs-4">
-    <button type="submit" class="btn btn-default"><%= t :show %></button>
+    <div class="col-xs-2">
+      <%= f.select :formula,
+                   options_for_select(formulas.map { |formula| [t(formula, scope: :formulas), formula] }, @indicator.formula),
+                   {},
+                   class: 'form-control', id: 'formula' %>
+    </div>
+
+    <div class="col-xs-4">
+      <button type="submit" class="btn btn-default"><%= t :show %></button>
+    </div>
   </div>
 
 <% end %>
+
+<script>
+  $(function() {
+    $('#instructions').tooltip({ html: true });
+  });
+</script>

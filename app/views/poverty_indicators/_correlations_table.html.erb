@@ -1,0 +1,12 @@
+<table class="table table-condensed">
+  <tbody>
+  <% @correlations.
+       select { |c| c.comparison_indicator == comparison_indicator }.
+       each do |correlation| %>
+    <tr>
+      <td><%= t correlation.indicator, scope: :indicators %></td>
+      <td><%= number_with_delimiter correlation.value %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

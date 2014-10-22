@@ -7,6 +7,6 @@ class PovertyIndicatorsController < ApplicationController
   end
 
   def correlations
-    @correlations = Correlations.new PovertyIndicator.indicators_for_correlations, 'pobreza'
+    @correlations = Correlation.all.order('ABS(value) desc').to_a
   end
 end

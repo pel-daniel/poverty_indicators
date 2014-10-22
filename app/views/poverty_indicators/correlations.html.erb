@@ -4,21 +4,39 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <table class="table table-condensed">
-      <thead>
-      <tr>
-        <td><%= t @correlations.comparison_indicator, scope: :indicators %></td>
-      </tr>
-      </thead>
 
-      <tbody>
-        <% @correlations.table.each do |row| %>
-          <tr>
-            <td><%= t row[0], scope: :indicators %></td>
-            <td><%= number_with_delimiter row[1] %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active">
+        <a href="#poverty" role="tab" data-toggle="tab">
+          <%= t :pobreza, scope: :indicators %>
+        </a>
+      </li>
+
+      <li>
+        <a href="#poverty-e" role="tab" data-toggle="tab">
+          <%= t :pobreza_e, scope: :indicators %>
+        </a>
+      </li>
+      <li>
+        <a href="#poverty-m" role="tab" data-toggle="tab">
+          <%= t :pobreza_m, scope: :indicators %>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div class="tab-pane active" id="poverty">
+        <%= render 'correlations_table', comparison_indicator: 'pobreza' %>
+      </div>
+
+      <div class="tab-pane" id="poverty-e">
+        <%= render 'correlations_table', comparison_indicator: 'pobreza_e' %>
+      </div>
+
+      <div class="tab-pane" id="poverty-m">
+        <%= render 'correlations_table', comparison_indicator: 'pobreza_m' %>
+      </div>
+    </div>
   </div>
 </div>

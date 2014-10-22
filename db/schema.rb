@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009020924) do
+ActiveRecord::Schema.define(version: 20141010093954) do
+
+  create_table "correlations", force: true do |t|
+    t.string  "indicator"
+    t.string  "comparison_indicator"
+    t.decimal "value",                precision: 5, scale: 4
+  end
 
   create_table "poverty_indicators", force: true do |t|
     t.integer "ent"

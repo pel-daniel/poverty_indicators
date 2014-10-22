@@ -6,5 +6,5 @@ PovertyIndicators::Application.routes.draw do
     end
   end
 
-  root to: 'poverty_indicators#index'
+  root to: 'poverty_indicators#indicator_by_state'
 end

@@ -11,7 +11,7 @@ class IndicatorByState
   end
 
   def values
-    @hash ||= records.each_with_object({}) { |r, memo| memo[r.nom_ent.to_sym] = r.send(@indicator) }
+    @values ||= records.each_with_object({}) { |r, memo| memo[r.nom_ent.to_sym] = r.send(@indicator) }
   end
 
   def empty?

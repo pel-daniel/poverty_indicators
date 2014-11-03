@@ -1,10 +1,10 @@
 <div class="page-header">
-  <h1><%= t :indicator_by_state %></h1>
+  <h1><%= t :indicator_comparison %></h1>
 </div>
 
-<%= render 'form' %>
+<%= render 'comparison_form' %>
 
-<% unless @indicator.empty? %>
+<% unless @comparison.empty? %>
 
   <div class="row separator">
     <div class="col-xs-12">
@@ -22,21 +22,25 @@
         <div class="tab-pane" id="table">
           <table class="table table-condensed">
             <thead>
-            <tr>
-              <th><%= t :state %></th>
-              <th><%= t @indicator.indicator, scope: :indicators %></th>
-            </tr>
+              <tr>
+                <th>
+                  <%= "#{t @comparison.indicator1, scope: :indicators} vs #{t @comparison.indicator2, scope: :indicators}" %>
+                </th>
+                <th>
+                  <%= t :correlation %>
+                </th>
+              </tr>
             </thead>
 
             <tbody>
-            <% @indicator.values.sort_by { |_, value| -value }.each do |key, value| %>
+              <% @comparison.values.sort_by { |_, value| -value.abs }.each do |key, value| %>
 
-              <tr>
-                <td><%= key %></td>
-                <td><%= number_with_delimiter value %></td>
-              </tr>
+                <tr>
+                  <td><%= key %></td>
+                  <td><%= number_with_delimiter value %></td>
+                </tr>
 
-            <% end %>
+              <% end %>
             </tbody>
           </table>
         </div>
@@ -51,11 +55,11 @@
   <script>
     $(function () {
 
-      var data = <%= raw HighchartMap.prepare_data(@indicator.values).to_json %>;
+      var data = <%= raw HighchartMap.prepare_data(@comparison.values).to_json %>;
 
       $('#map_container').highcharts('Map', {
         title : {
-          text : '<%= t @indicator.indicator, scope: :indicators %>'
+          text : '<%= "#{t @comparison.indicator1, scope: :indicators} vs #{t @comparison.indicator2, scope: :indicators}" %>'
         },
         mapNavigation: {
           enabled: true
@@ -68,7 +72,7 @@
           data : data,
           mapData: Highcharts.maps['countries/mx/mx-all'],
           joinBy: 'hc-key',
-          name: '<%= t @indicator.indicator, scope: :indicators %>'
+          name: '<%= "#{t @comparison.indicator1, scope: :indicators} vs #{t @comparison.indicator2, scope: :indicators}" %>'
         }]
       });
     });

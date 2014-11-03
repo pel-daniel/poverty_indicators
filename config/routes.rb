@@ -3,6 +3,7 @@ PovertyIndicators::Application.routes.draw do
     collection do
       get :indicator_by_state
       get :correlations
+      get :comparisons
     end
   end
 

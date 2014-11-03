@@ -9,4 +9,8 @@ class PovertyIndicatorsController < ApplicationController
   def correlations
     @correlations = Correlation.all.order('ABS(value) desc').to_a
   end
+
+  def comparisons
+    @comparison = IndicatorComparison.new params[:indicator_comparison] || {}
+  end
 end

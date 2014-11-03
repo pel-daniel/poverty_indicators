@@ -1,4 +1,10 @@
 <table class="table table-condensed">
+  <thead>
+    <tr>
+      <th><%= t :indicator %></th>
+      <th><%= t :correlation_with_indicator, indicator: t(comparison_indicator, scope: :indicators) %></th>
+    </tr>
+  </thead>
   <tbody>
   <% @correlations.
        select { |c| c.comparison_indicator == comparison_indicator }.

@@ -6,7 +6,7 @@ namespace :csv_import do
 
     require 'csv'
 
-    csv_file_path = '../Indicadores_municipales_sabana_DA.csv'
+    csv_file_path = './lib/tasks/Indicadores_municipales_sabana_DA.csv'
 
     messages = ['', 'Muy alto', 'Alto', 'Medio', 'Bajo', 'Muy bajo']
 

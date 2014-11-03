@@ -16,6 +16,14 @@
   margin-top: 10px;
 }
 
+.large-separator {
+  margin-top: 25px;
+}
+
+.lead {
+  margin: 0;
+}
+
 .hover {
   color: #428bca;
   cursor: pointer;

@@ -33,7 +33,7 @@
 
               <tr>
                 <td><%= key %></td>
-                <td><%= number_with_delimiter value %></td>
+                <td><%= number_with_precision value, delimiter: ',' %></td>
               </tr>
 
             <% end %>

@@ -4,7 +4,7 @@ es:
   correlation: Correlación
   correlation_with_indicator: Correlación con %{indicator}
   correlations: Correlaciones
-  correlations_with_poverty_indicators_html: Correlaciones con indicadores de <small>pobreza, pobreza extrema y pobreza moderada</small>
+  correlations_with_poverty_indicators_html: 'Correlaciones con indicadores de: <small>pobreza, pobreza extrema y pobreza moderada</small>'
   formula: 'Fórmula:'
   formula_instructions: |
     Indica como se calcula el valor del estado en base a los municipios.<br/>
@@ -13,7 +13,6 @@ es:
     Suma: Suma de todos los municipios del estado.
   graphic: Graficar
   indicator: Indicador
-  indicator2: Indicador 2
   indicator_by_state: Indicador por Estado
   indicator_comparison: Comparar indicadores
   map: Mapa

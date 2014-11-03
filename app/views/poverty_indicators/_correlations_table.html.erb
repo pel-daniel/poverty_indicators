@@ -11,7 +11,7 @@
        each do |correlation| %>
     <tr>
       <td><%= t correlation.indicator, scope: :indicators %></td>
-      <td><%= number_with_delimiter correlation.value %></td>
+      <td><%= number_with_precision correlation.value, delimiter: ',' %></td>
     </tr>
   <% end %>
   </tbody>

@@ -7,7 +7,7 @@ class PovertyIndicatorsController < ApplicationController
   end
 
   def correlations
-    @correlations = Correlation.all.order('ABS(value) desc').to_a
+    @correlations = Correlation.all.order('(value IS NULL), ABS(value) desc').to_a
   end
 
   def comparisons

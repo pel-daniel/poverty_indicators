@@ -1,6 +1,6 @@
 namespace :csv_import do
 
-  desc 'Import CSV Data.'
+  desc 'Data import'
 
   task poverty_indicators: :environment do
 
@@ -19,5 +19,15 @@ namespace :csv_import do
       PovertyIndicator.create! row.to_hash
     end
 
+  end
+
+  task correlations: :environment do
+    %w(pobreza pobreza_m pobreza_e).each do |indicator|
+      correlations = Correlations.new PovertyIndicator.indicators_for_correlations, indicator
+
+      correlations.each do |correlation|
+        Correlation.create indicator: correlation.first, value: correlation.last, comparison_indicator: indicator
+      end
+    end
   end
 end

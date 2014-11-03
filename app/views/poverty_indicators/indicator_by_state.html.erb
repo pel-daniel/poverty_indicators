@@ -29,11 +29,11 @@
             </thead>
 
             <tbody>
-            <% @indicator.records.each do |row| %>
+            <% @indicator.values.each do |key, value| %>
 
               <tr>
-                <td><%= row.nom_ent %></td>
-                <td><%= number_with_delimiter row.send(@indicator.indicator) %></td>
+                <td><%= key %></td>
+                <td><%= number_with_delimiter value %></td>
               </tr>
 
             <% end %>
@@ -51,7 +51,7 @@
   <script>
     $(function () {
 
-      var data = <%= raw @indicator.values_for_map.to_json %>;
+      var data = <%= raw HighchartMap.prepare_data(@indicator.values).to_json %>;
 
       $('#map_container').highcharts('Map', {
         title : {
